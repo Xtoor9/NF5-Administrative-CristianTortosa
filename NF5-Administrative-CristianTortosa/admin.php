@@ -17,7 +17,7 @@ mysqli_select_db($db,'serie') or die(mysqli_error($db));
  <body>
  <table style="width:100%;">
   <tr>
-   <th colspan="2">Cars<a href="serie.php?action=add">[ADD]</a></th>
+   <th colspan="2">Serie<a href="serie.php?action=add">[ADD]</a></th>
   </tr>
 <?php
 $query = 'SELECT * FROM serie';
@@ -30,12 +30,12 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo $row['nombre_serie'];
     echo '</td><td>';
     echo ' <a href="serie.php?action=edit&id=' . $row['id_serie'] . '"> [EDIT]</a>'; 
-    echo ' <a href="delete.php?type=car&id=' . $row['id_serie'] . '"> [DELETE]</a>';
+    echo ' <a href="delete.php?type=serie&id=' . $row['id_serie'] . '"> [DELETE]</a>';
     echo '</td></tr>';
 }
 ?>
   <tr>
-    <th colspan="2">Tipo deSerie <a href="carconfig.php?action=add"> [ADD]</a></th>
+    <th colspan="2">Tipo deSerie <a href="tiposerie.php?action=add"> [ADD]</a></th>
   </tr>
 <?php
 $query = 'SELECT * FROM tiposerie';

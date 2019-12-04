@@ -9,7 +9,7 @@ mysqli_select_db($db,'serie') or die(mysqli_error($db));
 if (!isset($_GET['do']) || $_GET['do'] != 1) {
     switch ($_GET['type']) {
     case 'serie':
-        echo 'Are you sure you want to delete this car?<br/>';
+        echo 'Are you sure you want to delete this serie?<br/>';
         break;
     case 'tiposerie':
         echo 'Are you sure you want to delete this configuration?<br/>';
@@ -34,7 +34,7 @@ if (!isset($_GET['do']) || $_GET['do'] != 1) {
 <a href="admin.php">Return to Index</a></p>
 <?php
         break;
-    case 'car':
+    case 'serie':
         $query = 'DELETE FROM serie 
             WHERE
                 id_serie = ' . $_GET['id'];

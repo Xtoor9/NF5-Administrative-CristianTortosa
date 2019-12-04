@@ -33,7 +33,7 @@ if ($_GET['action'] == 'edit') {
 ?>
 <html>
  <head>
-  <title><?php echo ucfirst($_GET['action']); ?> Car</title>
+  <title><?php echo ucfirst($_GET['action']); ?> Serie</title>
  </head>
  <body>
   <form action="commit.php?action=<?php echo $_GET['action']; ?>&type=serie"
@@ -64,7 +64,7 @@ $result = mysqli_query($db, $query) or die(mysqli_error($db));
 // populate the select options with the results
 while ($row = mysqli_fetch_assoc($result)) {
     //foreach ($row as $value) {
-        if ($row['tiposerie_id'] == $car_type) {
+        if ($row['tiposerie_id'] == $tipo_serie) {
             echo '<option value="' . $row['tiposerie_id'] .
                 '" selected="selected">';
         } else {

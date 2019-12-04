@@ -17,7 +17,7 @@ case 'add':
     case 'serie':
         $query = "INSERT INTO
             serie
-                (nombre_serie ,tipo_serie ,ano_serie ,car_brand , car_configuration)
+                (nombre_serie ,tipo_serie ,ano_serie ,episodios_serie , coste_serie)
             VALUES
                 ('" . $_POST['nombre_serie'] . "',
                  " . $_POST['tipo_serie'] . ",
